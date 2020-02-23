@@ -10,23 +10,39 @@ import Login from '../pages/login/login'
 export default [
     {
         path:'/main',
-        component:Main
+        component:Main,
+        meta:{
+            isShowFooter:true
+        }
+
     },
     {
         path:'/cart',
-        component:Cart
+        component:Cart,
+        meta:{
+            isShowFooter:true
+        }
     },
     {
         path:'/personal',
-        component:Personal
+        component:Personal,
+        meta:{
+            isShowFooter:true
+        }
     },
     {
         path:'/buy', // 类名规范一点，
         component:Buy
+        ,meta:{
+            isShowFooter:true
+        }
     },
     {
         path:'/classify',
-        component:Classify
+        component:Classify,
+        meta:{
+            isShowFooter:true
+        }
     },
     {
         path:'/login',
