@@ -13,5 +13,11 @@ export const getcateNavDatas =()=>ajax({
 export const getcateLists =()=>ajax({
 	url:'/cateLists'
 });
+export const getWaterfall =()=>ajax({
+	url:'/pubu'
+});
+export const getLanjiazai=()=>ajax({
+	url:'/lanjiazai'
+});
 
 

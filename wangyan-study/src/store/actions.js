@@ -2,14 +2,18 @@ import {
 	// getAddress,
 	getindex,
 	getcateNavDatas,
-	getcateLists
+	getcateLists,
+	getWaterfall,
+	getLanjiazai
 } from '../api/index'
 
 import {
 	// SAVE_IMAGES
 	SAVE_INDEX,
 	SAVE_GETCATENAVDATAS,
-	SAVE_GETCATELISTS
+	SAVE_GETCATELISTS,
+	SAVE_GETWATERFALL,
+	SAVE_GETLANJIAZAI
 } from "./mutations_type";
 
 export default {
@@ -32,6 +36,22 @@ export default {
 		let result = await getcateLists()
 
 		commit(SAVE_GETCATELISTS,result)
+	},
+	async getAddWatrtfall({commit}){
+		let result = await getWaterfall()
+		// console.log(result)
+
+		if(result.code == 200){
+			commit(SAVE_GETWATERFALL,result.data)
+		}
+	},
+	async getAddLanjiazai({commit}){
+		let result = await getLanjiazai()
+		// console.log(result)
+
+		if(result.code == 200){
+			commit(SAVE_GETLANJIAZAI,result.data)
+		}
 	},
 
 }

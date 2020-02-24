@@ -2,7 +2,10 @@ export default {
   indexCateModule:'',
   index:{},
   getcateNavDatas:{},
-  getcateLists:[]
+  waterFall:[],
+  getcateLists:[],
+  getlanjiazai:[]
+
 
 
 }

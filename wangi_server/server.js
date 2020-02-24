@@ -11,6 +11,9 @@ let deomIndex = require('./datas/index');
 let deomcateNavDatas = require('./datas/cateNavDatas');
 let deomindexCateModule = require('./datas/indexCateModule');
 let deomcateLists = require('./datas/cateLists');
+let deompubu = require('./datas/pubu.json');
+let deomlanjiazai = require('./datas/lanjiazai.json');
+
 
 router.get('/demo', (ctx, next) => {
   ctx.body = demoData
@@ -27,6 +30,13 @@ router.get('/indexCateModule', (ctx, next) => {
 router.get('/cateLists', (ctx, next) => {
   ctx.body = deomcateLists
 });
+router.get('/pubu', (ctx, next) => {
+  ctx.body = deompubu
+});
+router.get('/lanjiazai', (ctx, next) => {
+  ctx.body = deomlanjiazai
+});
+
 
 app
   .use(router.routes())
